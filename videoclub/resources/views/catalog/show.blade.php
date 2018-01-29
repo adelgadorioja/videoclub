@@ -5,19 +5,19 @@
   
     <div class="row">
         <div class="col-sm-4"><br>
-            <img src="{{$pelicula['poster']}}" style="height:350px; width: 250px;"/>
+            <img src="{{$pelicula->poster}}" style="height:350px; width: 250px;"/>
             <h4 style="min-height:45px;margin:5px 0 10px 0"></h4>
        </div>
         <div class="col-sm-8">
 
-            <h2>{{$pelicula['title']}}</h2>
-            <p>Año:{{$pelicula['year']}}<p>
-            <p>Director:{{$pelicula['director']}}<p>     
-            <p><strong>Resumen:</strong>{{$pelicula['synopsis']}}
+            <h2>{{$pelicula->title}}</h2>
+            <p>Año:{{$pelicula->year}}<p>
+            <p>Director:{{$pelicula->director}}<p>     
+            <p><strong>Resumen:</strong>{{$pelicula->synopsis}}
 
             <p><strong>Estado:</strong>
                  <?php
-                 if( $pelicula['rented'] == true){
+                 if( $pelicula->rented == true){
                     echo 'película actualmente alquilada.';
                     echo '<br><br>';
                     echo '<button type="button" class="btn btn-primary">Alquilar película</button>';
